@@ -5,11 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Hello from './components/hello';
 
-const root = <div>
-  <Hello firstName="Sho" lastName ="Neriki" />
-</div>
+// const root = <div>
+//   <Hello firstName="Sho" lastName ="Neriki" />
+// </div>
 
-ReactDOM.render(root,document.getElementById('root'));
+ReactDOM.render(<App />,document.getElementById('root'));
 
  // If you want to start measuring performance in your app, pass a function
  // to log results (for example: reportWebVitals(console.log))
