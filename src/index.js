@@ -5,14 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Hello from './components/hello';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Hello />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const root = <div>
+  <Hello firstName="Sho" lastName ="Neriki" />
+  <Hello firstName="Thomas" lastName ="Rodgers" />
+</div>
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+ReactDOM.render(root,document.getElementById('root'));
+
+ // If you want to start measuring performance in your app, pass a function
+ // to log results (for example: reportWebVitals(console.log))
+ // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
