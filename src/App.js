@@ -6,10 +6,10 @@ import Flat from './components/flat'
 class App extends Component {
   render() {
     const flat = {
-      "name": "Serene Apartment Surrounded By Woodlands",
-      "imageUrl": "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat2.jpg",
-      "price": 200,
-      "priceCurrency": "EUR",
+      "name": "Serene House Surrounded By Woodlands",
+      "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/wood-wrapped-rustic-living-room-1569465164.jpg",
+      "price": 400,
+      "priceCurrency": "$",
       "lat": 48.885707,
       "lng": 2.343543
     };

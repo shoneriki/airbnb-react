@@ -11,7 +11,7 @@ import "./flat.css"
 class Flat extends React.Component {
   render() {
 
-    const title= this.props.flat.name + this.props.flat.priceCurrency + " - " +
+    const title= this.props.flat.name + ", Price per week: " + this.props.flat.priceCurrency +
     this.props.flat.price;
 
     const style = {
