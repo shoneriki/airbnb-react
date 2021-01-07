@@ -1,12 +1,28 @@
 import React from "react";
 import "./flat.css"
 
+// const flat = {
+//   name: "Serene Apartment Surrounded By Woodlands",
+//   price: 100,
+// }
+
+// <Flat flat={flat}/>
+
 class Flat extends React.Component {
   render() {
+
+    const title= this.props.flat.name + this.props.flat.priceCurrency + " - " +
+    this.props.flat.price;
+
+    const style = ;
     return (
       <div className="flat">
-        <div className="flat-picture"></div>
-        <div className="flat-title"></div>
+        <div className="flat-picture" style={style}>
+
+        </div>
+        <div className="flat-title">
+          {title}
+        </div>
       </div>
     );
   }

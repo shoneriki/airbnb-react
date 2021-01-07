@@ -7,7 +7,6 @@ import Hello from './components/hello';
 
 const root = <div>
   <Hello firstName="Sho" lastName ="Neriki" />
-  <Hello firstName="Thomas" lastName ="Rodgers" />
 </div>
 
 ReactDOM.render(root,document.getElementById('root'));
