@@ -4,6 +4,7 @@ import GoogleMapReact from 'google-map-react';
 // import ReactMapGL from 'react-map-gl';
 import './App.css';
 import Flat from './components/flat'
+import Marker from './components/marker'
 
 class App extends Component {
 
@@ -13,16 +14,6 @@ class App extends Component {
       flats: []
     };
   }
-
-  state = {
-  viewport: {
-    width: "100vw",
-    height: "100vh",
-    latitude: 48.8566,
-    longitude: 2.3522,
-    zoom: 11
-  }
-};
 
   componentDidMount() {
   const url = "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/flats.json"
@@ -50,7 +41,7 @@ class App extends Component {
         </div>
         <div className="flats">
           {this.state.flats.map((flat)  => {
-            return <Flat flat={flat} />
+            return <Flat key={flat.name} flat={flat} />
           })}
         </div>
       </div>
@@ -58,6 +49,9 @@ class App extends Component {
         <GoogleMapReact
           center = {center}
           zoom = {11} >
+        {this.state.flats.map((flat)  => {
+            return <Marker key={flat.name} lat={flat.lat} lng={flat.lng} text={flat.price} />
+          })}
         </GoogleMapReact>
       </div>
     </div>
