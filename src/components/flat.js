@@ -9,8 +9,10 @@ import "./flat.css"
 // <Flat flat={flat}/>
 
 class Flat extends React.Component {
+  handleClick = () => {
+    this.props.selectFlat(this.props.flat);
+  }
   render() {
-
     const title= this.props.flat.priceCurrency + this.props.flat.price + " - " +
     this.props.flat.name;
 
@@ -18,7 +20,7 @@ class Flat extends React.Component {
       backgroundImage: `url('${this.props.flat.imageUrl}')`
     };
     return (
-      <div className="flat" onClick={}>
+      <div className="flat" onClick={this.handleClick}>
         <div className="flat-picture" style={style}>
 
         </div>
