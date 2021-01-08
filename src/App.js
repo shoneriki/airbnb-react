@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import GoogleMapReact from 'google-map-react';
+// import ReactMapGL from 'react-map-gl';
 import './App.css';
 import Flat from './components/flat'
 
@@ -13,6 +14,16 @@ class App extends Component {
     };
   }
 
+  state = {
+  viewport: {
+    width: "100vw",
+    height: "100vh",
+    latitude: 48.8566,
+    longitude: 2.3522,
+    zoom: 11
+  }
+};
+
   componentDidMount() {
   const url = "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/flats.json"
   fetch(url)
@@ -23,6 +34,8 @@ class App extends Component {
     })
   })
 }
+
+
 
   render() {
     const center = {
@@ -42,11 +55,10 @@ class App extends Component {
         </div>
       </div>
       <div className="map">
-      <GoogleMapReact
-          center={center}
-          defaultZoom={11}
-        >
-      </GoogleMapReact>
+        <GoogleMapReact
+          center = {center}
+          zoom = {11} >
+        </GoogleMapReact>
       </div>
     </div>
     );
